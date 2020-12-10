@@ -1,0 +1,1 @@
+import{o as n,e as a,G as s}from"./framework.c00dda38.js";const t='{"title":"Extending RouterLink","description":"","frontmatter":{},"relativePath":"guide/advanced/extending-router-link.md","lastUpdated":1607560187107.5667}';var p={};const o=s('',8);p.render=function(s,t,p,e,c,u){return n(),a("div",null,[o])};export default p;export{t as __pageData};

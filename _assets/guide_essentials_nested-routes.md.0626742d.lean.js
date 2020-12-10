@@ -1,1 +1,0 @@
-import{o as n,e as s,G as a}from"./framework.c00dda38.js";const t='{"title":"Nested Routes","description":"","frontmatter":{},"relativePath":"guide/essentials/nested-routes.md","lastUpdated":1607559931863.911}';var e={};const o=a('',16);e.render=function(a,t,e,p,c,r){return n(),s("div",null,[o])};export default e;export{t as __pageData};
