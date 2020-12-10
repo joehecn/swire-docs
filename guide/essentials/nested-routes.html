@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Nested Routes | Swire docs
+    </title>
+    <meta name="description" content="The official router for Vue.js.">
+    <link rel="stylesheet" href="/swire-docs/_assets/style.6fbaaea0.css">
+    <link rel="modulepreload" href="/swire-docs/_assets/framework.c00dda38.js">
+    <link rel="modulepreload" href="/swire-docs/_assets/guide_essentials_nested-routes.md.0cb6b17c.lean.js">
+    <link rel="modulepreload" href="/swire-docs/_assets/app.c05f8932.js">
+    <link rel="icon" href="/logo.png">
+    <script src="https://unpkg.com/thesemetrics@latest" async=""></script>
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-6e9501ba><div class="sidebar-button" data-v-6e9501ba><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/swire-docs/" aria-label="Swire Docs, back to home" data-v-6e9501ba data-v-4f592d84><!----> Swire Docs</a><div class="flex-grow" data-v-6e9501ba></div><div class="nav" data-v-6e9501ba><nav class="nav-links" data-v-6e9501ba data-v-7e43412a><!--[--><div class="item" data-v-7e43412a><div class="nav-link" data-v-7e43412a data-v-58e79b0c><a class="item" href="/swire-docs/doc/" data-v-58e79b0c>Doc <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--[--><!----><!--]--><!--]--></header><aside class="sidebar" data-v-6d3fedc6><nav class="nav-links nav" data-v-6d3fedc6 data-v-7e43412a><!--[--><div class="item" data-v-7e43412a><div class="nav-link" data-v-7e43412a data-v-58e79b0c><a class="item" href="/swire-docs/doc/" data-v-58e79b0c>Doc <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--[--><!--]--><!--]--><ul class="sidebar-links" data-v-6d3fedc6><!--[--><li class="sidebar-link" data-v-6d3fedc6 data-v-6d3fedc6><a class="sidebar-link-item" href="/swire-docs/introduction.html" data-v-6d3fedc6>Introduction</a><!----></li><!--]--></ul><!--[--><!--[--><!--]--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-aa5adba8><div class="container" data-v-aa5adba8><!--[--><!--[--><!----><!--]--><!--[--><!--]--><!--]--><div class="content" data-v-aa5adba8><div data-v-aa5adba8><h1 id="nested-routes"><a class="header-anchor" href="#nested-routes" aria-hidden="true">#</a> Nested Routes</h1><p>Some application&#39;s UIs are composed of components that are nested multiple levels deep. In this case, it is very common that the segments of a URL corresponds to a certain structure of nested components, for example:</p><div class="language-"><pre><code>/user/johnny/profile                     /user/johnny/posts
++------------------+                  +-----------------+
+| User             |                  | User            |
+| +--------------+ |                  | +-------------+ |
+| | Profile      | |  +------------&gt;  | | Posts       | |
+| |              | |                  | |             | |
+| +--------------+ |                  | +-------------+ |
++------------------+                  +-----------------+
+</code></pre></div><p>With Vue Router, you can express this relationship using nested route configurations.</p><p>Given the app we created in the last chapter:</p><div class="language-html"><pre><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js"><pre><code><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token operator">:</span> <span class="token string">&#39;&lt;div&gt;User {{ $route.params.id }}&lt;/div&gt;&#39;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// these are passed to `createRouter`</span>
+<span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">&#39;/user/:id&#39;</span><span class="token punctuation">,</span> component<span class="token operator">:</span> User <span class="token punctuation">}</span><span class="token punctuation">]</span>
+</code></pre></div><p>The <code>&lt;router-view&gt;</code> here is a top-level <code>router-view</code>. It renders the component matched by a top level route. Similarly, a rendered component can also contain its own, nested <code>&lt;router-view&gt;</code>. For example, if we add one inside the <code>User</code> component&#39;s template:</p><div class="language-js"><pre><code><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;div class=&quot;user&quot;&gt;
+      &lt;h2&gt;User {{ $route.params.id }}&lt;/h2&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>To render components into this nested <code>router-view</code>, we need to use the <code>children</code> option in any of the routes:</p><div class="language-js"><pre><code><span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">&#39;/user/:id&#39;</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> User<span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// UserProfile will be rendered inside User&#39;s &lt;router-view&gt;</span>
+        <span class="token comment">// when /user/:id/profile is matched</span>
+        path<span class="token operator">:</span> <span class="token string">&#39;profile&#39;</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> UserProfile<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// UserPosts will be rendered inside User&#39;s &lt;router-view&gt;</span>
+        <span class="token comment">// when /user/:id/posts is matched</span>
+        path<span class="token operator">:</span> <span class="token string">&#39;posts&#39;</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> UserPosts<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p><strong>Note that nested paths that start with <code>/</code> will be treated as a root path. This allows you to leverage the component nesting without having to use a nested URL.</strong></p><p>As you can see the <code>children</code> option is just another Array of routes like <code>routes</code> itself. Therefore, you can keep nesting views as much as you need.</p><p>At this point, with the above configuration, when you visit <code>/user/eduardo</code>, nothing will be rendered inside <code>User</code>&#39;s <code>router-view</code>, because no nested route is matched. Maybe you do want to render something there. In such case you can provide an empty nested path:</p><div class="language-js"><pre><code><span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">&#39;/user/:id&#39;</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> User<span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token comment">// UserHome will be rendered inside User&#39;s &lt;router-view&gt;</span>
+      <span class="token comment">// when /user/:id is matched</span>
+      <span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">&#39;&#39;</span><span class="token punctuation">,</span> component<span class="token operator">:</span> UserHome <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+      <span class="token comment">// ...other sub routes</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>A working demo of this example can be found <a href="https://codesandbox.io/s/nested-views-vue-router-4-examples-hl326?initialpath=%2Fusers%2Feduardo" target="_blank" rel="noopener noreferrer">here</a>.</p></div></div><footer class="page-footer" data-v-aa5adba8 data-v-ae772eca><div class="edit" data-v-ae772eca><div class="edit-link" data-v-ae772eca data-v-fff8e848><!----></div></div><div class="updated" data-v-ae772eca><!----></div></footer><!----><!--[--><!--[--><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"index\":\"md\",\"installation\":\"md\",\"introduction\":\"md\",\"api_index\":\"md\",\"doc_index\":\"md\",\"guide_index\":\"md\",\"guide_advanced_composition-api\":\"md\",\"guide_advanced_data-fetching\":\"md\",\"guide_advanced_dynamic-routing\":\"md\",\"guide_advanced_extending-router-link\":\"md\",\"guide_advanced_lazy-loading\":\"md\",\"guide_advanced_meta\":\"md\",\"guide_advanced_navigation-failures\":\"md\",\"guide_advanced_navigation-guards\":\"md\",\"guide_advanced_scroll-behavior\":\"md\",\"guide_advanced_transitions\":\"md\",\"guide_essentials_dynamic-matching\":\"md\",\"guide_essentials_history-mode\":\"md\",\"guide_essentials_named-routes\":\"md\",\"guide_essentials_named-views\":\"md\",\"guide_essentials_navigation\":\"md\",\"guide_essentials_nested-routes\":\"md\",\"guide_essentials_passing-props\":\"md\",\"guide_essentials_redirect-and-alias\":\"md\",\"guide_essentials_route-matching-syntax\":\"md\",\"guide_migration_index\":\"md\",\"index.md\":\"3b56a701\",\"installation.md\":\"700e19e8\",\"introduction.md\":\"ef33385e\",\"api_index.md\":\"2c50682a\",\"doc_index.md\":\"6127730b\",\"guide_index.md\":\"18b18574\",\"guide_advanced_composition-api.md\":\"0c2fa780\",\"guide_advanced_data-fetching.md\":\"1d356838\",\"guide_advanced_dynamic-routing.md\":\"2b078d2e\",\"guide_advanced_extending-router-link.md\":\"c921a0c6\",\"guide_advanced_lazy-loading.md\":\"9d428d6a\",\"guide_advanced_meta.md\":\"05744b6c\",\"guide_advanced_navigation-failures.md\":\"38ba6143\",\"guide_advanced_navigation-guards.md\":\"29cac61b\",\"guide_advanced_scroll-behavior.md\":\"eb571044\",\"guide_advanced_transitions.md\":\"a6b9009a\",\"guide_essentials_dynamic-matching.md\":\"ad53943d\",\"guide_essentials_history-mode.md\":\"a8ac45bc\",\"guide_essentials_named-routes.md\":\"3ec9376d\",\"guide_essentials_named-views.md\":\"52e1ec63\",\"guide_essentials_navigation.md\":\"5b65ebd3\",\"guide_essentials_nested-routes.md\":\"0cb6b17c\",\"guide_essentials_passing-props.md\":\"f6c242bc\",\"guide_essentials_redirect-and-alias.md\":\"f6f15bb6\",\"guide_essentials_route-matching-syntax.md\":\"2874390b\",\"guide_migration_index.md\":\"bf5cf060\"}")</script>
+    <script type="module" async src="/swire-docs/_assets/app.c05f8932.js"></script>
+  </body>
+</html>

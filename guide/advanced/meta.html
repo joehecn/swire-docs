@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Route Meta Fields | Swire docs
+    </title>
+    <meta name="description" content="The official router for Vue.js.">
+    <link rel="stylesheet" href="/swire-docs/_assets/style.6fbaaea0.css">
+    <link rel="modulepreload" href="/swire-docs/_assets/framework.c00dda38.js">
+    <link rel="modulepreload" href="/swire-docs/_assets/guide_advanced_meta.md.05744b6c.lean.js">
+    <link rel="modulepreload" href="/swire-docs/_assets/app.c05f8932.js">
+    <link rel="icon" href="/logo.png">
+    <script src="https://unpkg.com/thesemetrics@latest" async=""></script>
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-6e9501ba><div class="sidebar-button" data-v-6e9501ba><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/swire-docs/" aria-label="Swire Docs, back to home" data-v-6e9501ba data-v-4f592d84><!----> Swire Docs</a><div class="flex-grow" data-v-6e9501ba></div><div class="nav" data-v-6e9501ba><nav class="nav-links" data-v-6e9501ba data-v-7e43412a><!--[--><div class="item" data-v-7e43412a><div class="nav-link" data-v-7e43412a data-v-58e79b0c><a class="item" href="/swire-docs/doc/" data-v-58e79b0c>Doc <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--[--><!----><!--]--><!--]--></header><aside class="sidebar" data-v-6d3fedc6><nav class="nav-links nav" data-v-6d3fedc6 data-v-7e43412a><!--[--><div class="item" data-v-7e43412a><div class="nav-link" data-v-7e43412a data-v-58e79b0c><a class="item" href="/swire-docs/doc/" data-v-58e79b0c>Doc <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--[--><!--]--><!--]--><ul class="sidebar-links" data-v-6d3fedc6><!--[--><li class="sidebar-link" data-v-6d3fedc6 data-v-6d3fedc6><a class="sidebar-link-item" href="/swire-docs/introduction.html" data-v-6d3fedc6>Introduction</a><!----></li><!--]--></ul><!--[--><!--[--><!--]--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-aa5adba8><div class="container" data-v-aa5adba8><!--[--><!--[--><!----><!--]--><!--[--><!--]--><!--]--><div class="content" data-v-aa5adba8><div data-v-aa5adba8><h1 id="route-meta-fields"><a class="header-anchor" href="#route-meta-fields" aria-hidden="true">#</a> Route Meta Fields</h1><p>Sometimes, you might want to attach arbitrary information to routes like transition names, who can access the route, etc. This can be achieved through the <code>meta</code> property which accepts an object of properties and can be accessed on the route location and navigation guards. You can define <code>meta</code> properties like this:</p><div class="language-js"><pre><code><span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">&#39;/posts&#39;</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> PostsLayout<span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">&#39;new&#39;</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> PostsNew<span class="token punctuation">,</span>
+        <span class="token comment">// only authenticated users can create posts</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span> requiresAuth<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">&#39;:id&#39;</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> PostsDetail
+        <span class="token comment">// anybody can read a post</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span> requiresAuth<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>So how do we access this <code>meta</code> field?</p><!-- TODO: the explanation about route records should be explained before and things should be moved here --><p>First, each route object in the <code>routes</code> configuration is called a <strong>route record</strong>. Route records may be nested. Therefore when a route is matched, it can potentially match more than one route record.</p><p>For example, with the above route config, the URL <code>/posts/new</code> will match both the parent route record (<code>path: &#39;/posts&#39;</code>) and the child route record (<code>path: &#39;new&#39;</code>).</p><p>All route records matched by a route are exposed on the <code>$route</code> object (and also route objects in navigation guards) as the <code>$route.matched</code> Array. We could loop through that array to check all <code>meta</code> fields, but Vue Router also provides you a <code>$route.meta</code> that is a non-recursive merge of <strong>all <code>meta</code></strong> fields from parent to child. Meaning you can simply write</p><div class="language-js"><pre><code>router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// instead of having to check every route record with</span>
+  <span class="token comment">// to.matched.some(record =&gt; record.meta.requiresAuth)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>requiresAuth <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>auth<span class="token punctuation">.</span><span class="token function">isLoggedIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// this route requires auth, check if logged in</span>
+    <span class="token comment">// if not, redirect to login page.</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">&#39;/login&#39;</span><span class="token punctuation">,</span>
+      <span class="token comment">// save the location we were at to come back later</span>
+      query<span class="token operator">:</span> <span class="token punctuation">{</span> redirect<span class="token operator">:</span> to<span class="token punctuation">.</span>fullPath <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="typescript"><a class="header-anchor" href="#typescript" aria-hidden="true">#</a> TypeScript</h2><p>It is possible to type the meta field by extending the <code>RouteMeta</code> interface:</p><div class="language-ts"><pre><code><span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&#39;vue-router&#39;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">RouteMeta</span> <span class="token punctuation">{</span>
+    <span class="token comment">// is optional</span>
+    isAdmin<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span>
+    <span class="token comment">// must be declared by every route</span>
+    requiresAuth<span class="token operator">:</span> <span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-aa5adba8 data-v-ae772eca><div class="edit" data-v-ae772eca><div class="edit-link" data-v-ae772eca data-v-fff8e848><!----></div></div><div class="updated" data-v-ae772eca><!----></div></footer><!----><!--[--><!--[--><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"index\":\"md\",\"installation\":\"md\",\"introduction\":\"md\",\"api_index\":\"md\",\"doc_index\":\"md\",\"guide_index\":\"md\",\"guide_advanced_composition-api\":\"md\",\"guide_advanced_data-fetching\":\"md\",\"guide_advanced_dynamic-routing\":\"md\",\"guide_advanced_extending-router-link\":\"md\",\"guide_advanced_lazy-loading\":\"md\",\"guide_advanced_meta\":\"md\",\"guide_advanced_navigation-failures\":\"md\",\"guide_advanced_navigation-guards\":\"md\",\"guide_advanced_scroll-behavior\":\"md\",\"guide_advanced_transitions\":\"md\",\"guide_essentials_dynamic-matching\":\"md\",\"guide_essentials_history-mode\":\"md\",\"guide_essentials_named-routes\":\"md\",\"guide_essentials_named-views\":\"md\",\"guide_essentials_navigation\":\"md\",\"guide_essentials_nested-routes\":\"md\",\"guide_essentials_passing-props\":\"md\",\"guide_essentials_redirect-and-alias\":\"md\",\"guide_essentials_route-matching-syntax\":\"md\",\"guide_migration_index\":\"md\",\"index.md\":\"3b56a701\",\"installation.md\":\"700e19e8\",\"introduction.md\":\"ef33385e\",\"api_index.md\":\"2c50682a\",\"doc_index.md\":\"6127730b\",\"guide_index.md\":\"18b18574\",\"guide_advanced_composition-api.md\":\"0c2fa780\",\"guide_advanced_data-fetching.md\":\"1d356838\",\"guide_advanced_dynamic-routing.md\":\"2b078d2e\",\"guide_advanced_extending-router-link.md\":\"c921a0c6\",\"guide_advanced_lazy-loading.md\":\"9d428d6a\",\"guide_advanced_meta.md\":\"05744b6c\",\"guide_advanced_navigation-failures.md\":\"38ba6143\",\"guide_advanced_navigation-guards.md\":\"29cac61b\",\"guide_advanced_scroll-behavior.md\":\"eb571044\",\"guide_advanced_transitions.md\":\"a6b9009a\",\"guide_essentials_dynamic-matching.md\":\"ad53943d\",\"guide_essentials_history-mode.md\":\"a8ac45bc\",\"guide_essentials_named-routes.md\":\"3ec9376d\",\"guide_essentials_named-views.md\":\"52e1ec63\",\"guide_essentials_navigation.md\":\"5b65ebd3\",\"guide_essentials_nested-routes.md\":\"0cb6b17c\",\"guide_essentials_passing-props.md\":\"f6c242bc\",\"guide_essentials_redirect-and-alias.md\":\"f6f15bb6\",\"guide_essentials_route-matching-syntax.md\":\"2874390b\",\"guide_migration_index.md\":\"bf5cf060\"}")</script>
+    <script type="module" async src="/swire-docs/_assets/app.c05f8932.js"></script>
+  </body>
+</html>
