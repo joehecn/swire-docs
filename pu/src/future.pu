@@ -1,0 +1,73 @@
+@startuml future
+  ' 定义变量 -------------------------------
+  ' 本地 windows 服务器
+  node "本地 Windows 服务器" as windows {
+    ' MS Sql
+    database "Microsoft SQL" as mssql
+    ' Excel file
+    folder "Excel folder" as excel {
+      file "Excel"
+    }
+    ' Txt file
+    folder "Txt folder" as txt {
+      file "Txt"
+    }
+
+    ' 定时抓取数据
+    component schedule [
+      <b>schedule
+      ----
+      1. 定时抓取并处理数据
+      2. 处理线上请求
+    ]
+
+    ' Local Mongodb
+    database "Local Mongodb Replica Set" as localdb {
+      database arbiter
+      database primary
+      database secondary
+    }
+    ' 单项同步
+    component shake [
+      <b>Mongo Shake
+      ----
+      单向同步数据到线上数据库
+    ]
+    ' Change Streams
+    component change [
+      <b>Change Streams
+      ----
+      监听 线上数据库 update 事件
+    ]
+  }
+
+  ' 线上 linux 服务器 http://swire.enermon.cloud/
+  node "线上服务器 172.105.202.170" as linux {
+    ' web
+    component "前台 swire.enermon.cloud" as web
+    component "后台 energy" as energy
+    ' Online Mongodb
+    database "Online Mongodb Replica Set" as db {
+      database arbiterdb
+      database primarydb
+      database secondarydb
+    }
+  }
+
+  actor user
+
+  ' 关系
+  mssql --> schedule
+  excel --> schedule
+  txt --> schedule
+  schedule --> localdb
+  localdb --> shake
+
+  shake --> db : 端口 27017
+  db <--> energy : 双向
+  energy <--> web : 双向
+  web <--> user : 双向
+  
+  db --> change : 端口 27017
+  change --> schedule
+@enduml
