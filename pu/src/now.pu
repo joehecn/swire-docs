@@ -17,7 +17,7 @@
     component schedule [
       <b>schedule
       ----
-      定时抓取并处理数据
+      定时抓取并处理本地数据
     ]
 
     ' Local Mongodb

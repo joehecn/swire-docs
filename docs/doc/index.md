@@ -26,4 +26,4 @@ sidebar: auto
 - 线上数据库升级到集群数据库
 - 本地监听线上数据库 update 事件
 
-![Future pu](/future.svg)
+![End pu](/end.svg)
