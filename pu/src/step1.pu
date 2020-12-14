@@ -1,4 +1,4 @@
-@startuml now
+@startuml step1
   ' 定义变量 -------------------------------
   ' 本地 windows 服务器
   node "本地 Windows 服务器" as windows {
@@ -17,7 +17,8 @@
     component schedule [
       <b>schedule
       ----
-      定时抓取并处理本地数据
+      1. 定时抓取并处理本地数据
+      2. 实时监控和处理线上请求
     ]
 
     ' Local Mongodb
@@ -41,6 +42,12 @@
     component "后台 energy" as energy
 
     database "Mongodb" as db
+    ' 消息队列
+    component kafka [
+      <b>Kafka
+      ----
+      消息队列
+    ]
   }
 
   actor user
@@ -52,9 +59,19 @@
   schedule --> localdb
   localdb --> shake
 
-  shake --> db : 端口 27017
+  shake -0)-> kafka : 端口 27017
+  ' schedule <-[#blue](0- kafka : 端口 27017
+
+  kafka -0)-> energy
+  ' kafka <-[#blue](0- energy
+
   db -[#green]-> energy
+  db <-- energy
+
   energy -[#green]-> web
+  ' energy <-[#blue]- web
+
   web -[#green]-> user
+  ' web <-[#blue]- user
   
 @enduml

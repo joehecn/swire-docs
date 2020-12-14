@@ -1,0 +1,107 @@
+@startuml step2
+  ' 定义变量 -------------------------------
+  ' 本地 windows 服务器
+  node "本地 Windows 服务器" as windows {
+    ' MS Sql
+    database "Microsoft SQL" as mssql
+    ' Excel file
+    folder "Excel folder" as excel {
+      file "Excel"
+    }
+    ' Txt file
+    folder "Txt folder" as txt {
+      file "Txt"
+    }
+
+    ' 定时抓取数据
+    component schedule [
+      <b>schedule
+      ----
+      1. 定时抓取并处理本地数据
+      2. 实时监控和处理线上请求
+    ]
+
+    ' Local Mongodb
+    database "Local Mongodb Replica Set" as localdb {
+      database arbiter
+      database primary
+      database secondary
+    }
+    ' 单项同步
+    component shake [
+      <b>Mongo Shake
+      ----
+      单向同步数据到线上数据库
+    ]
+  }
+
+  ' 线上 linux 服务器 http://swire.enermon.cloud/
+  node "日本服务器 172.105.202.170" as linuxOld {
+    ' web
+    component "前台 swire.enermon.cloud" as webOld
+    component "后台 energy" as energyOld
+
+    database "Mongodb" as dbOld
+    ' 消息队列
+    component kafka [
+      <b>Kafka
+      ----
+      消息队列
+    ]
+  }
+
+  actor "user" as userOld
+
+  cloud "香港阿里云" as cloud {
+    database "香港 Mongodb 云数据库" as db {
+      database arbiterDB
+      database primaryDB
+      database secondaryDB
+    }
+    ' 线上 linux 服务器 http://swire.enermon.cloud/
+    node "香港 ECS 云服务器" as linux {
+      ' web
+      component "前台 swire.enermon.cloud" as web
+      component "后台 energy" as energy
+
+      ' ' 消息队列
+      ' component kafka [
+      '   <b>Kafka
+      '   ----
+      '   消息队列
+      ' ]
+    }
+  }
+
+  actor "user" as user
+
+  ' 关系
+  mssql --> schedule
+  excel --> schedule
+  txt --> schedule
+  schedule --> localdb
+  localdb --> shake
+
+  shake -0)-> kafka : 端口 27017
+  kafka -0)-> energyOld
+  dbOld -[#green]-> energyOld
+  dbOld <-- energyOld
+  energyOld -[#green]-> webOld
+  webOld -[#green]-> userOld
+
+  shake -0)-> kafka : 端口 27017
+  schedule <-[#blue](0- kafka : 端口 27017
+
+  kafka -0)-> energy
+  kafka <-[#blue](0- energy
+
+  db -[#green]-> energy
+  db <-- energy
+
+  energy -[#green]-> web
+  energy <-[#blue]- web
+
+  web -[#green]-> user
+  web <-[#blue]- user
+  
+@enduml

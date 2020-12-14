@@ -2368,10 +2368,10 @@ vite@^1.0.0-rc.13:
     vue "^3.0.3"
     ws "^7.3.1"
 
-vitepress@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.npm.taobao.org/vitepress/download/vitepress-0.9.1.tgz#9a85aedd59c09126be58c12397c7094630946690"
-  integrity sha1-moWu3VnAkSa+WMEjl8cJRjCUZpA=
+vitepress@^0.9.2:
+  version "0.9.2"
+  resolved "https://registry.npmjs.org/vitepress/-/vitepress-0.9.2.tgz#e6fc9142b0af41d53bd8e3713729ba0c2cec5725"
+  integrity sha512-48dwnvWxUZToAZYBmS3rm6MD2C1JG4hZOKY88P8PZj9X1iKLmCEDL/it46p5n4hz2+2jQQUkwJrwiUdqJ3G4LQ==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"

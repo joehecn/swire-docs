@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') {
 
 /** @type {UserConfig} */
 const config = {
-  base: '/swire-docs/',
+  base: '/swire-docs/', // swire-docs/
   lang: 'en-US',
   title: 'Swire Docs',
   description: 'The official Docs for Swire.',
