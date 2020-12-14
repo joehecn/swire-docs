@@ -1,1 +1,0 @@
-import{o as a,e as n,G as s}from"./framework.c00dda38.js";const t='{"title":"Named Routes","description":"","frontmatter":{},"relativePath":"guide/essentials/named-routes.md","lastUpdated":1607922418683.9895}';var e={};const o=s('',10);e.render=function(s,t,e,p,c,r){return a(),n("div",null,[o])};export default e;export{t as __pageData};
