@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1384px" preserveAspectRatio="none" style="width:786px;height:1384px;" version="1.1" viewBox="0 0 786 1384" width="786px" zoomAndPan="magnify"><defs><filter height="300%" id="f1t9aaj689dk9d" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[b3c28d35935f3876a80fe695c843767a]
+cluster windows--><polygon fill="#FFFFFF" filter="url(#f1t9aaj689dk9d)" points="16,16,26,6,475,6,475,967.5,465,977.5,16,977.5,16,16" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="465" x2="475" y1="16" y2="6"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="465" y1="16" y2="16"/><line style="stroke:#000000;stroke-width:1.5;" x1="465" x2="465" y1="16" y2="977.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="152" x="165.5" y="31.9951">本地 Windows 服务器</text><!--MD5=[2644e6386f494d2055ebee00e5be7925]
+cluster excel--><polygon fill="#FFFFFF" filter="url(#f1t9aaj689dk9d)" points="276,38,375,38,382,60.2969,385,60.2969,385,109,276,109,276,38" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="276" x2="382" y1="60.2969" y2="60.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="93" x="280" y="52.9951">Excel folder</text><!--MD5=[b1998054c1ba7999bb471b34eb291026]
+cluster txt--><polygon fill="#FFFFFF" filter="url(#f1t9aaj689dk9d)" points="165,38,248,38,255,60.2969,258,60.2969,258,109,165,109,165,38" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="165" x2="255" y1="60.2969" y2="60.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="77" x="169" y="52.9951">Txt folder</text><!--MD5=[dfd23b90799ff6bf30fa3aabce10361c]
+cluster localdb--><path d="M24,426.5 C24,416.5 137.5,416.5 137.5,416.5 C137.5,416.5 251,416.5 251,426.5 L251,959.5 C251,969.5 137.5,969.5 137.5,969.5 C137.5,969.5 24,969.5 24,959.5 L24,426.5 " fill="#FFFFFF" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M24,426.5 C24,436.5 137.5,436.5 137.5,436.5 C137.5,436.5 251,436.5 251,426.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="211" x="32" y="451.4951">Local Mongodb Replica Set</text><!--MD5=[976610ca9a5eadefdf5ca97519844eee]
+cluster linux--><polygon fill="#FFFFFF" filter="url(#f1t9aaj689dk9d)" points="483,762.5,493,752.5,769,752.5,769,1235.5,759,1245.5,483,1245.5,483,762.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="759" x2="769" y1="762.5" y2="752.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="483" x2="759" y1="762.5" y2="762.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="759" x2="759" y1="762.5" y2="1245.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="210" x="517" y="778.4951">日本服务器 172.105.202.170</text><!--MD5=[670a7a1f521ac73274266eeead13f881]
+entity mssql--><path d="M24,70.5 C24,60.5 81,60.5 81,60.5 C81,60.5 138,60.5 138,70.5 L138,95.7969 C138,105.7969 81,105.7969 81,105.7969 C81,105.7969 24,105.7969 24,95.7969 L24,70.5 " fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M24,70.5 C24,80.5 81,80.5 81,80.5 C81,80.5 138,80.5 138,70.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="34" y="97.4951">Microsoft SQL</text><!--MD5=[73ca96ba5138b7bb33dba1da3d0e470d]
+entity schedule--><rect fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" height="86.8906" style="stroke:#A80036;stroke-width:1.5;" width="211" x="107.5" y="228.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="298.5" y="233.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="296.5" y="235.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="296.5" y="239.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="72" x="122.5" y="261.4951">schedule</text><line style="stroke:#A80036;stroke-width:1.0;" x1="108.5" x2="317.5" y1="264.7969" y2="264.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="171" x="122.5" y="281.792">1. 定时抓取并处理本地数据</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="171" x="122.5" y="298.0889">2. 实时监控和处理线上请求</text><!--MD5=[294dd4295b3538d2597418482775d5c9]
+entity shake--><rect fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" height="70.5938" style="stroke:#A80036;stroke-width:1.5;" width="208" x="259" y="626.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="447" y="631.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="445" y="633.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="445" y="637.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="106" x="274" y="659.4951">Mongo Shake</text><line style="stroke:#A80036;stroke-width:1.0;" x1="260" x2="466" y1="662.7969" y2="662.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="168" x="274" y="679.792">单向同步数据到线上数据库</text><!--MD5=[5e28904cfe1c649a71fa9ba5e99b96e2]
+entity Excel--><polygon fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" points="285,65,285,101.2969,341,101.2969,341,75,331,65,285,65" style="stroke:#000000;stroke-width:1.5;"/><path d="M331,65 L331,75 L341,75 " fill="#FEFECE" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="295" y="87.9951">Excel</text><!--MD5=[8b5e1a0da03b0da7632d9e511fe0fc43]
+entity Txt--><polygon fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" points="173.5,65,173.5,101.2969,214.5,101.2969,214.5,75,204.5,65,173.5,65" style="stroke:#000000;stroke-width:1.5;"/><path d="M204.5,65 L204.5,75 L214.5,75 " fill="#FEFECE" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="183.5" y="87.9951">Txt</text><!--MD5=[8e613d614b23a976aeefc2e13d7e1e88]
+entity arbiter--><path d="M39,468.5 C39,458.5 71,458.5 71,458.5 C71,458.5 103,458.5 103,468.5 L103,493.7969 C103,503.7969 71,503.7969 71,503.7969 C71,503.7969 39,503.7969 39,493.7969 L39,468.5 " fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M39,468.5 C39,478.5 71,478.5 71,478.5 C71,478.5 103,478.5 103,468.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="49" y="495.4951">arbiter</text><!--MD5=[bd39a4c76d4729f7d3a505ada56cb8c7]
+entity primary--><path d="M173,468.5 C173,458.5 208,458.5 208,458.5 C208,458.5 243,458.5 243,468.5 L243,493.7969 C243,503.7969 208,503.7969 208,503.7969 C208,503.7969 173,503.7969 173,493.7969 L173,468.5 " fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M173,468.5 C173,478.5 208,478.5 208,478.5 C208,478.5 243,478.5 243,468.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50" x="183" y="495.4951">primary</text><!--MD5=[ca68d2e3dfee2ff470ce8e9333c0d544]
+entity secondary--><path d="M32,926.5 C32,916.5 78,916.5 78,916.5 C78,916.5 124,916.5 124,926.5 L124,951.7969 C124,961.7969 78,961.7969 78,961.7969 C78,961.7969 32,961.7969 32,951.7969 L32,926.5 " fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M32,926.5 C32,936.5 78,936.5 78,936.5 C78,936.5 124,936.5 124,926.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="42" y="953.4951">secondary</text><!--MD5=[08af8945a84acfe1eabc0963aa87c412]
+entity web--><rect fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="217" x="543.5" y="1191.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="740.5" y="1196.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="738.5" y="1198.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="738.5" y="1202.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="177" x="558.5" y="1224.4951">前台 swire.enermon.cloud</text><!--MD5=[8c5a6473d0402e601d65832b879e3c77]
+entity energy--><rect fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="120" x="601" y="1022.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="701" y="1027.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="699" y="1029.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="699" y="1033.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="616" y="1055.4951">后台 energy</text><!--MD5=[7468467f3b6b392f1d176d828c753b77]
+entity db--><path d="M622,807.5 C622,797.5 665,797.5 665,797.5 C665,797.5 708,797.5 708,807.5 L708,832.7969 C708,842.7969 665,842.7969 665,842.7969 C665,842.7969 622,842.7969 622,832.7969 L622,807.5 " fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" style="stroke:#000000;stroke-width:1.5;"/><path d="M622,807.5 C622,817.5 665,817.5 665,817.5 C665,817.5 708,817.5 708,807.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="66" x="632" y="834.4951">Mongodb</text><!--MD5=[e29745d789d1cd237fb5892a53e7b9d1]
+entity kafka--><rect fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" height="70.5938" style="stroke:#A80036;stroke-width:1.5;" width="96" x="491" y="784.5"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="567" y="789.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="565" y="791.5"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="565" y="795.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="44" x="506" y="817.4951">Kafka</text><line style="stroke:#A80036;stroke-width:1.0;" x1="492" x2="586" y1="820.7969" y2="820.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="506" y="837.792">消息队列</text><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><ellipse cx="652" cy="1308" fill="#FEFECE" filter="url(#f1t9aaj689dk9d)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M652,1316 L652,1343 M639,1324 L665,1324 M652,1343 L639,1358 M652,1343 L665,1358 " fill="none" filter="url(#f1t9aaj689dk9d)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="636.5" y="1376.4951">user</text><!--MD5=[ae93cba451dc69f119472b40e0674480]
+link mssql to schedule--><path d="M96.9223,105.7978 C117.2169,134.8561 152.8367,185.857 179.2821,223.7221 " fill="none" id="mssql-to-schedule" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="182.46,228.2723,180.5861,218.6034,179.5971,224.1731,174.0273,223.1841,182.46,228.2723" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0dbc8509c2bfa1eed15664e3accf0e4e]
+link excel to schedule--><path d="M358,109 C326.2821,149.3421 287.5208,192.6408 258.0567,224.4657 " fill="none" id="excel-to-schedule" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="254.5107,228.2889,263.5637,224.4104,257.9109,224.623,257.6983,218.9701,254.5107,228.2889" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9b55868552ef094c06c8bdf4d7495233]
+link txt to schedule--><path d="M244.8312,109.4031 C244.7651,109.7407 244.6985,110.0808 244.6314,110.4234 C244.4973,111.1085 244.3613,111.8033 244.2234,112.5075 C243.9477,113.9158 243.6647,115.3614 243.375,116.8415 C242.216,122.7616 240.9493,129.2319 239.6122,136.0623 C234.2635,163.3839 227.7868,196.4679 222.562,223.1565 " fill="none" id="txt-to-schedule" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="221.567,228.2389,227.2217,220.1752,222.5277,223.3321,219.3708,218.638,221.567,228.2389" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[481893dbcb530bd42beba0e73803945a]
+link schedule to localdb--><path d="M193.7941,315.7441 C187.7681,329.9386 180.9156,346.5307 174.1467,363.8725 C170.7622,372.5435 167.3986,381.4019 164.1695,390.2418 C162.555,394.6617 160.9742,399.0771 159.4412,403.462 C158.6747,405.6545 157.9201,407.8394 157.1794,410.0134 C156.809,411.1005 156.442,412.1848 156.0787,413.266 C155.8971,413.8066 155.7163,414.3465 155.5365,414.8855 C155.4466,415.155 155.357,415.4243 155.2675,415.6934 C155.2228,415.8279 155.1782,415.9624 155.1336,416.0969 " fill="none" id="schedule-to-localdb" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="155.1336,416.0969,161.7636,408.8138,156.7077,411.3511,154.1704,406.2952,155.1336,416.0969" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[93b5e1091a069314c0b8172f4575c299]
+link localdb to shake--><path d="M251.4752,585.8122 C251.6754,585.9628 251.8755,586.1134 252.0755,586.2638 C252.8755,586.8653 253.6742,587.4644 254.4716,588.0612 C256.0662,589.2547 257.6554,590.4384 259.238,591.6122 C262.4033,593.9596 265.5427,596.2669 268.6491,598.531 C281.0746,607.5873 292.9708,615.9526 303.8761,623.4369 " fill="none" id="localdb-to-shake" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="308.047,626.2896,302.8766,617.9071,303.92,623.4669,298.3602,624.5103,308.047,626.2896" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c1e399a5d37d9cd0207df1e0036f151e]
+link shake to kafka--><path d="M402.9371,697.8526 C430.5029,722.5992 467.1452,755.494 495.4591,780.9122 " fill="none" id="shake-to-kafka" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="499.2209,784.2892,495.1958,775.3004,495.5002,780.9491,489.8516,781.2535,499.2209,784.2892" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="70" x="452" y="740.5669">端口 27017</text><path d="M449.4557,749.1161 A10,10 0 0 0 458.9031 738.5924" fill="#FFFFFF" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="448.9176" cy="739.1306" fill="#FFFFFF" rx="6" ry="6" style="stroke:#A80036;stroke-width:1.5;"/><!--MD5=[f0d0ed801e36bdb21ab36d381282f7d6]
+link kafka to energy--><path d="M558.3313,855.7311 C582.6074,900.6023 623.7494,976.6475 645.8638,1017.5228 " fill="none" id="kafka-to-energy" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="648.4639,1022.3287,647.6994,1012.5096,646.0847,1017.9311,640.6632,1016.3164,648.4639,1022.3287" style="stroke:#A80036;stroke-width:1.0;"/><path d="M600.0537,947.7093 A10,10 0 0 0 612.4921 940.9799" fill="#FFFFFF" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="602.9082" cy="938.1254" fill="#FFFFFF" rx="6" ry="6" style="stroke:#A80036;stroke-width:1.5;"/><!--MD5=[678ab4e4a9def5d5f86c03b141b961f1]
+link db to energy--><path d="M656.5185,842.8631 C649.7997,884.3718 648.0057,972.0035 652.7071,1017.2069 " fill="none" id="db-to-energy" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="653.2797,1022.2391,656.2365,1012.8446,652.7144,1017.2712,648.2878,1013.749,653.2797,1022.2391" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[855d9230e55039dc1e3eac7fef489d06]
+reverse link db to energy--><path d="M673.762,847.8627 C678.8307,892.7951 677.0611,980.4376 670.0239,1022.2391 " fill="none" id="db-backto-energy" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="673.1454,842.8631,670.2771,852.285,673.7574,847.8255,678.2169,851.3058,673.1454,842.8631" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[20722876e6dadf27d121116923e044b0]
+link energy to web--><path d="M659.7675,1068.6444 C658.1361,1099.2784 655.2616,1153.2545 653.5042,1186.2551 " fill="none" id="energy-to-web" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="653.2321,1191.3646,657.7052,1182.5901,653.4981,1186.3717,649.7166,1182.1645,653.2321,1191.3646" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[b8bb4ea9537ae551ae4db45a3eff5dc2]
+link web to user--><path d="M652,1237.6257 C652,1253.181 652,1274.2175 652,1293.0955 " fill="none" id="web-to-user" style="stroke:#008000;stroke-width:1.0;"/><polygon fill="#008000" points="652,1298.3565,656,1289.3565,652,1293.3565,648,1289.3565,652,1298.3565" style="stroke:#008000;stroke-width:1.0;"/><!--MD5=[c1cc5f351e3b1b530bbea1e94f298d0a]
+link arbiter to primary--><!--MD5=[646f079785c1a82ee6f637aa7f2a1e2b]
+link arbiter to secondary--><!--MD5=[1ee5186591d2d6951b9dacaac1445b3d]
+@startuml step1
+  ' 定义变量 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  ' 本地 windows 服务器
+  node "本地 Windows 服务器" as windows {
+    ' MS Sql
+    database "Microsoft SQL" as mssql
+    ' Excel file
+    folder "Excel folder" as excel {
+      file "Excel"
+    }
+    ' Txt file
+    folder "Txt folder" as txt {
+      file "Txt"
+    }
+
+    ' 定时抓取数据
+    component schedule [
+      <b>schedule
+      - - - -
+      1. 定时抓取并处理本地数据
+      2. 实时监控和处理线上请求
+    ]
+
+    ' Local Mongodb
+    database "Local Mongodb Replica Set" as localdb {
+      database arbiter
+      database primary
+      database secondary
+    }
+    ' 单项同步
+    component shake [
+      <b>Mongo Shake
+      - - - -
+      单向同步数据到线上数据库
+    ]
+  }
+
+  ' 线上 linux 服务器 http://swire.enermon.cloud/
+  node "日本服务器 172.105.202.170" as linux {
+    ' web
+    component "前台 swire.enermon.cloud" as web
+    component "后台 energy" as energy
+
+    database "Mongodb" as db
+    ' 消息队列
+    component kafka [
+      <b>Kafka
+      - - - -
+      消息队列
+    ]
+  }
+
+  actor user
+
+  ' 关系
+  mssql - -> schedule
+  excel - -> schedule
+  txt - -> schedule
+  schedule - -> localdb
+  localdb - -> shake
+
+  shake -0)-> kafka : 端口 27017
+  ' schedule <-[#blue](0- kafka : 端口 27017
+
+  kafka -0)-> energy
+  ' kafka <-[#blue](0- energy
+
+  db -[#green]-> energy
+  db <- - energy
+
+  energy -[#green]-> web
+  ' energy <-[#blue]- web
+
+  web -[#green]-> user
+  ' web <-[#blue]- user
+  
+@enduml
+
+@startuml step1
+  node "本地 Windows 服务器" as windows {
+    database "Microsoft SQL" as mssql
+    folder "Excel folder" as excel {
+      file "Excel"
+    }
+    folder "Txt folder" as txt {
+      file "Txt"
+    }
+
+    component schedule [
+      <b>schedule
+      - - - -
+      1. 定时抓取并处理本地数据
+      2. 实时监控和处理线上请求
+    ]
+
+    database "Local Mongodb Replica Set" as localdb {
+      database arbiter
+      database primary
+      database secondary
+    }
+    component shake [
+      <b>Mongo Shake
+      - - - -
+      单向同步数据到线上数据库
+    ]
+  }
+
+  node "日本服务器 172.105.202.170" as linux {
+    component "前台 swire.enermon.cloud" as web
+    component "后台 energy" as energy
+
+    database "Mongodb" as db
+    component kafka [
+      <b>Kafka
+      - - - -
+      消息队列
+    ]
+  }
+
+  actor user
+
+  mssql - -> schedule
+  excel - -> schedule
+  txt - -> schedule
+  schedule - -> localdb
+  localdb - -> shake
+
+  shake -0)-> kafka : 端口 27017
+
+  kafka -0)-> energy
+
+  db -[#green]-> energy
+  db <- - energy
+
+  energy -[#green]-> web
+
+  web -[#green]-> user
+  
+@enduml
+
+PlantUML version 1.2020.22(Sun Dec 06 09:36:27 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
